@@ -1,0 +1,22 @@
+Invoke-RestMethod -Uri "http://127.0.0.1:5000/api/caesar/encrypt" `
+-Method POST `
+-Headers @{"Content-Type"="application/json"} `
+-Body '{"plain_text":"HELLO","key":3}'
+
+
+Invoke-RestMethod -Uri "http://127.0.0.1:5000/api/caesar/decrypt" `
+-Method POST `
+-Headers @{"Content-Type"="application/json"} `
+-Body '{"cipher_text":"KHOOR","key":3}'
+
+
+
+Invoke-RestMethod -Uri "http://127.0.0.1:5000/api/vigenere/encrypt" `
+-Method POST `
+-Headers @{"Content-Type"="application/json"} `
+-Body '{"plain_text":"HELLO","key":"KEY"}'
+
+Invoke-RestMethod -Uri "http://127.0.0.1:5000/api/vigenere/decrypt" `
+-Method POST `
+-Headers @{"Content-Type"="application/json"} `
+-Body '{"cipher_text":"RIJVS","key":"KEY"}'
